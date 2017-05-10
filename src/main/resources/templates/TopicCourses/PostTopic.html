@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<h1 th:text="${headerMessage}"></h1>
+
+<!-- <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+    <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p>
+</div> -->
+<form action="/get" method="post" >
+
+    <table>
+    <tr>
+        <td>Student's Name :</td><td><input type="text" name="id" /></td>
+    </tr>
+    <tr>
+        <td>Student's Hobby :</td><td><input type="text" name="name" /></td>
+    </tr>
+    <tr>
+        <td>Student's Mobile :</td><td><input type="text" name="description" /></td>
+    </tr>
+    <tr>
+        <td>Student's DOB :</td><td><input type="text" name="studentDOB" /></td>
+    </tr>
+    </table>
+
+
+
+    <input type="submit" value="Submit your form by clicking here!" />
+
+</form>
+</body>
+</html>

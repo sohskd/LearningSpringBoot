@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<h1 th:text="${headerMessage}"></h1>
+
+<!-- <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+    <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p>
+</div> -->
+<form action="/testFormPostStudent" method="post" >
+
+    <table>
+    <tr>
+        <td>Student's Name :</td><td><input type="text" name="studentName" /></td>
+    </tr>
+    <tr>
+        <td>Student's Hobby :</td><td><input type="text" name="studentHobby" /></td>
+    </tr>
+    <tr>
+        <td>Student's Mobile :</td><td><input type="text" name="studentMobile" /></td>
+    </tr>
+    <tr>
+        <td>Student's DOB :</td><td><input type="text" name="studentDOB" /></td>
+    </tr>
+    <tr>
+        <td>Student's Skill Set :</td>
+        <td>
+            <select name="studentSkills" multiple="multiple">
+            <option value="Java Core">Java Core</option>
+            <option value="Spring Core">Spring Core</option>
+            <option value="Spring MVC">Spring MVC</option>
+            </select>
+        </td>
+    </tr>
+    </table>
+
+    <table>
+        <tr><td>Student's Address: </td></tr>
+        <tr>
+            <td>Country: <input type="text" name="studentAddress.country"/></td>
+            <td>City: <input type="text" name="studentAddress.city"/></td>
+            <td>Street: <input type="text" name="studentAddress.street"/></td>
+            <td>Pincode: <input type="text" name="studentAddress.pincode"/></td>
+        </tr>
+
+    </table>
+
+    <input type="submit" value="Submit your form by clicking here!" />
+
+</form>
+</body>
+</html>

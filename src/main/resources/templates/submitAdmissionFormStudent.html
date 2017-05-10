@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:fmt="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${headerMessage}"></h1>
+
+<table>
+    <tr>
+        <td>Student Name : </td>
+        <td th:text="${stud.studentName}"></td>
+    </tr>
+    <tr>
+        <td>Student Hobby : </td>
+        <td th:text="${stud.studentHobby}"></td>
+    </tr>
+    <tr>
+        <td>Student Mobile : </td>
+        <td th:text="${stud.studentMobile}"></td>
+    </tr>
+    <tr>
+        <td>Student DOB : </td>
+        <td th:text="${stud.studentDOB}"></td>
+    </tr>
+    <tr>
+        <td>Student Skills : </td>
+        <td th:text="${stud.studentSkills}"></td>
+    </tr>
+    <tr>
+        <td>Student Address: </td>
+        <td>Country:</td>
+        <td th:text="${stud.studentAddress.country}"></td>
+        <td>City:</td>
+        <td th:text="${stud.studentAddress.city}"></td>
+        <td>Street:</td>
+        <td th:text="${stud.studentAddress.street}"></td>
+        <td>Pincode:</td>
+        <td th:text="${stud.studentAddress.pincode}"></td>
+    </tr>
+</table>
+</body>
+</html>

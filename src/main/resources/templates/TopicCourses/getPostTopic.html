@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${headerMessage}"></h1>
+<form action="/postTopicForm" method="post">
+    <p>
+        Topic id : <input type="text" name="id" />
+    </p>
+    <p>
+        Topic name : <input type="text" name="name" />
+    </p>
+    <p>
+        Topic description : <input type="text" name="description" />
+    </p>
+    <input type="submit" value="Submit your form by clicking here!" />
+</form>
+</body>
+</html>

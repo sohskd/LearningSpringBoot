@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:fmt="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${headerMessage}"></h1>
+<h1>hi</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    <tr th:each="topic : ${Topics}">
+        <td th:text="${topic.id}"></td>
+        <td th:text="${topic.name}"></td>
+        <td th:text="${topic.description}"></td>
+    </tr>
+</table>
+<form action="/getPostTopicForm">
+    <input type="submit" value="Add more topics" />
+</form>
+</body>
+</html>
